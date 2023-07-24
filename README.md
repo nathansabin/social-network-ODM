@@ -6,3 +6,7 @@ model
 routes
 utils
 server.js V
+
+seed
+make models
+add to routes
