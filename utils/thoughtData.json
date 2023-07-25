@@ -1,0 +1,17 @@
+
+[
+    {
+    "thoughtText": "This is a sample thought.",
+    "username": "john doe",
+    "reactions": [
+        {
+            "reactionBody": "Nice thought!",
+            "username": "jane_smith"
+        },
+        {
+            "reactionBody": "I agree!",
+            "username": "bob_jones"
+        }
+        ]
+    }
+]

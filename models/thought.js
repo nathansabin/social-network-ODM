@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model, default: mongoose } = require("mongoose");
 
 function dateFormat(date) {
     const dateObject = new Date(date);
@@ -13,12 +13,16 @@ function dateFormat(date) {
     return `${month}/${day}/${year} ${hours}:${minutes}:${seconds}`;
 };
 
+const newId = () => {
+    return new mongoose.mongo.ObjectId();
+}; 
+
 const reactionSchema = Schema(
     {
         reactionId: {
             type: Schema.Types.ObjectId,
-            // maybe it works???
-            default: new mongoose.Types.ObjectId()
+            // make sure new id is generated
+            default: newId
         },
         reactionBody: {
             type: String,
@@ -39,19 +43,19 @@ const reactionSchema = Schema(
 const thoughtSchema = Schema(
     {
         thoughtText: {
-            Type: String,
+            type: String,
             required: true,
             max_length: 280,
             min_length: 1
         },
         createdAt: {
-            Type: Date,
+            type: Date,
             default: Date.now
             // TODO Use a getter method to format the timestamp on query
         },
         username: {
-            Types: String,
-            require: true
+            type: String,
+            required: true,
         },
         reactions: [reactionSchema]
     },

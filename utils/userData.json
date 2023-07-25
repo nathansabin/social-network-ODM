@@ -1,0 +1,20 @@
+[
+    {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "thoughts": [],
+      "friends": []
+    },
+    {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "thoughts": [], 
+      "friends": [] 
+    },
+    {
+      "name": "Bob Jones",
+      "email": "bob.jones@example.com",
+      "thoughts": [], 
+      "friends": [] 
+    }
+  ]

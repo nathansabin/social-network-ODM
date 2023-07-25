@@ -1,7 +1,6 @@
 // requirements
 const router = require('express').Router();
-// TODO require user module
-// const user = require("../../models/user");
+const { User, Thought } = require("../../models/index");
 
 // TODO user routes 
 // get all 
