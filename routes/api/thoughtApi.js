@@ -23,7 +23,6 @@ router.get("/:id", async (req, res) => {
     }
 });
 
-// TODO
 // add new thought connected to user
 router.post("/new/:id", async (req, res) => {
     try {
